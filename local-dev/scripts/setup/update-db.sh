@@ -1,0 +1,2 @@
+#! /bin/bash
+docker run -v $STEPFUL_APP_HOME/database/stepful-app:/liquibase/lib --network=stepful-app-local-dev liquibase/liquibase liquibase update  --username=stepful-app --password=stepful-app --url=jdbc:postgresql://stepful-app-db:5432/stepful-app --changelogFile=changelog-root.xml

@@ -1,0 +1,14 @@
+version: "3"
+services:
+  "stepful-app-ui":
+    image: nginx
+    container_name: "stepful-app-ui"
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    ports:
+      - 80:80
+    volumes:
+      - "$STEPFUL_APP_HOME/ui/apps:/srv/package"
+      - "$STEPFUL_APP_HOME/ui:/ui-config"
+      - "$STEPFUL_APP_HOME/ui/apps/ci-helpers:/setup"
+      - "$STEPFUL_APP_HOME/ui/local-dev/nginx.conf:/etc/nginx/nginx.conf"

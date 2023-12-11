@@ -1,0 +1,13 @@
+.studentPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 900px;
+}
+
+.headerRow {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+version: '3.3'
+networks:
+  default:
+    external:
+      name: stepful-app-local-dev
+services:
+  stepful-app-db:
+    image: postgres
+    restart: always
+    container_name: stepful-app-db
+    environment:
+      POSTGRES_USER: 'stepful-app'
+      POSTGRES_PASSWORD: 'stepful-app'
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./db/postgres-data:/var/lib/postgresql/data

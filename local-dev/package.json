@@ -1,0 +1,13 @@
+{
+  "name": "@tbiegner99/stepful-app",
+  "version": "0.0.1",
+  "description": "Stepful App System",
+  "bin": {
+    "stepful-app": "./scripts/stepful-app.sh"
+  },
+  "scripts": {
+    "preinstall": "./scripts/setup/install.sh"
+  },
+  "author": "",
+  "license": "ISC"
+}

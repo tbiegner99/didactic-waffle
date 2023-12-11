@@ -1,0 +1,8 @@
+This app includes template code as part of create-fullstack-app generator. It generates playwright tests and docker imagages for use in a local dev env as well as database migration foundations with liquibase, but they are NOT used here.
+
+Relevant code is in backent/stepful-app and ui/stepful-app
+For each, install npm dependencies and then run `npm run dev`
+
+Database DOES run in a docker image in local-dev/docker-compose-infra.yml and is a prerequisite. It exposes port 5432
+UI runs at http://localhost:8000/app
+Backend runs at http://localhost:8080/api

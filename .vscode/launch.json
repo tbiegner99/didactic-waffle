@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Current TS File",
+      "type": "node",
+      "request": "launch",
+      "args": ["src/app.ts"],
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}/backend/stepful-app",
+      "protocol": "inspector"
+    }
+  ]
+}
