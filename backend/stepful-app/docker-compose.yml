@@ -1,0 +1,19 @@
+version: "3"
+services:
+  "stepful-app":
+    build: $STEPFUL_APP_HOME/local-dev
+    container_name: "stepful-app"
+    environment:
+      - LOCAL=true
+      - BASE_URL=localhost
+      - DEBUGGER_ARGS=--continue
+      - DATABASE_URL=stepful-app-db
+      - DATABASE_PORT=5432
+      - DATABASE_USER=stepful-app
+      - DATABASE_PASSWORD=stepful-app
+      - DATABASE_SCHEMA=stepful-app
+    ports:
+      - "8080"
+      - "40000:40000"
+    volumes:
+      - "$STEPFUL_APP_HOME/backend/stepful-app:/srv/package"
